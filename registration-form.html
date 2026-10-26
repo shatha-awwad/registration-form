@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+
+   <h1>User Registration</h1>
+   
+   <form action="/register" method="POST" enctype="multipart/form-data">
+
+      <!-- =============================================== -->
+      <!-- TODO 1: مجموعة المعلومات الشخصية -->
+      <!-- ============================================== -->
+<fieldeset>
+    <legend>Personal Information</legend>
+
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" required minlength="3" placeholder="shatha eyad mosbah awwad">
+    <br><br>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required placeholder="ahmadxxaead@gmail.com">
+    <br><br>
+    
+    <label for="password">Password:</label>
+    <input type="Password" id="password" name="password" required minlength="8" placeholder="shatha awwad 2005">
+    <br><br>
+
+    <label for="confirm-password">Confirm Password:</label>
+    <input type="Password" id="confirm-password" name="confirm-password" required minlength="8" placeholder="shatha awwad 2005">
+    <br><br>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required value="2005-10-19">
+    <br><br>
+</fieldeset>
+      <!-- ============================================== --> 
+      <!-- TODO 2: جموعة المعلومات التواصل --> 
+      <! -- =============================================== -->
+    <fieldset>
+        <!-- رقم الهاتف-->
+        <legend>Contact Information</legend>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="0592082717">
+        <br><br>
+      <!-- العنوان -->
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="3" cols="40"></textarea>
+        <br><br>
+
+        <label for="city"></label>City:</label>
+        <select id="city" name="city">
+            <option value="">-- Select City --</option>
+            <option value="gaza">Gaza</option>
+            <option value="khan-younis">Khan Yunis</option>
+            <option value="deir-al-balah">Deir al-Balah</option>
+            <option value="rafah">Rafah</option>
+        </select>
+        <br><br>
+ </fieldset>  
+      
+   <br>
+   
+      <!-- ================================================ --> 
+      <!--TODO 3: مجموعة التفضيلات -->
+      <!-- ================================================ -->
+   <fieldset>
+      <legend>Preferences</legend>
+
+      <!-- الجنس -->
+       <label>Gender:</label><br>
+       <input type="radio" id="male" name="gender" value="male"
+       <label for="male">Male</label>
+
+       <input type="radio" id="female" name="gender" value="female">
+       <label for="female">Female</label>
+       <br><br>
+       
+       <!-- الاهتمامات-->
+       <label>Interests:</label><br>
+       <input type="checkbox" id="coding" name="interests" value="coding">
+       <label for="coding">Coding</label>
+
+       <input type="checkbox" id="design" name="interests" value="design">
+       <label for="design">Design</label>
+
+       <input type="checkbox" id="marketing" name="interests" value="marketing">
+       <label for="marketing">Marketing</label>
+       <br><br>
+
+       <!-- الدولة -->
+       <label for="country">Country:</label>
+       <select id="country" name="country" required>
+           <option value="">-- Select Country --</option>
+           <option value="palestine">Palestine -Gaza</option>
+           <option value="jordan">Jordan</option>
+           <option value="egypt">Egypt</option>
+       </select>
+       <br><br>
+       </fieldset>
+      
+      <!-- ================================================ -->
+      <!-- TODO 4: الصور الشخصية -->
+      <!-- ================================================ -->
+
+<fieldset>
+    <legend>Profile Picture</legend>
+    <label for="profile-picture">Upload Profile Picture:</label>
+    <input type="file" id="profile-picture" name="profile-picture" accept="imaage/*>
+    <br><br>
+    </fieldset>
+
+      <!-- ================================================ --> 
+      <!-- TODO 5: الشروط والازرار --> 
+      <!-- ================================================-->
+      <fieldset>
+        <legend>Terms and Conditions</legend>
+
+        <!-- مربع الموافقة على الشروط -->
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the terms and conditions</label>
+        <br><br>
+
+        <!-- ازرار الارسال واعادة الضبط -->
+        <input type="submit" value="Register">
+        <input type="reset" value="Reset">
+      </fieldset>
+
+</body>
+</html>
